@@ -21,6 +21,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
+}
+.show-chatbot .chatbot-toggler{
+transform: rotate(90deg) ;
+
 }
 .chatbot-toggler span {
   position: absolute;
@@ -48,7 +53,9 @@ body {
   right: 40px;
   bottom: 100px;
   border-radius: 15px;
+  transform-origin: bottom right;
   box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.1s ease;
 }
 .show-chatbot .chatbot {
   transform: scale(1);
@@ -91,6 +98,10 @@ body {
   max-width: 75%;
   font-size: 0.95rem;
 }
+.chatbox .chat p.error{
+  color: #721c24;
+  background:#f8d7da
+}
 .chatbox .incoming span {
   height: 32px;
   width: 32px;
@@ -129,6 +140,7 @@ body {
   outline: none;
   font-size: 0.95rem;
   resize: none;
+  max-height: 180px ;
   padding: 16px 15px 15px 0;
 }
 .chat-input span {
