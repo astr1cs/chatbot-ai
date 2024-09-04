@@ -4,7 +4,9 @@ const chatBox = document.querySelector(".chatbox");
 const chatBoxToggler=document.querySelector(".chatbot-toggler");
 const chatbotClosebtn=document.querySelector(".close-btn")
 
+
 import API_KEY from './API_KEY.js';
+
 
 let userMessage;
 const inputInitHeight=chatInput.scrollHeight;
@@ -25,7 +27,7 @@ const createChatLi = (message, className) => {
   return chatLi;
 };
 
-console.log(API_KEY);
+
 
 const generateResponse = (incomingChatLi) => {
   const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
