@@ -42,8 +42,9 @@ transform: rotate(90deg) ;
 .show-chatbot .chatbot-toggler span:last-child {
   opacity: 1;
 }
+
+
 .chatbot {
-  transform: scale(0.5);
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
@@ -53,10 +54,12 @@ transform: rotate(90deg) ;
   right: 40px;
   bottom: 100px;
   border-radius: 15px;
+  transform: scale(0.5);
   transform-origin: bottom right;
-  box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease;
+  box-shadow: 0 0 120px 0 rgba(0, 0, 0, 0.5);
 }
+
 .show-chatbot .chatbot {
   transform: scale(1);
   opacity: 1;
@@ -77,9 +80,9 @@ transform: rotate(90deg) ;
   right: 20px;
   top: 50%;
   color: #fff;
+  transform: translateY(-50%);
   display: none;
   cursor: pointer;
-  transform: translateY(-50%);
 }
 .chatbot .chatbox {
   height: 510px;
