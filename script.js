@@ -5,7 +5,9 @@ const chatBoxToggler=document.querySelector(".chatbot-toggler");
 const chatbotClosebtn=document.querySelector(".close-btn")
 
 
-import API_KEY from './API_KEY.js';
+//  import API_KEY from './API_KEY.js';
+let API_KEY = "AIzaSyDd1AV-fOsciZF5VxlgDCV6B33MRSQKJ48";
+
 
 
 let userMessage;
