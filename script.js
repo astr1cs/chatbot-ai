@@ -26,7 +26,7 @@ const createChatLi = (message, className) => {
 
 
 const generateResponse = (incomingChatLi) => {
-  const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${secrets.API_KEY }`;
+  const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${process.env.API_KEY}`;
   const messageElement = incomingChatLi.querySelector("p");
   
   const requestOptions = {
