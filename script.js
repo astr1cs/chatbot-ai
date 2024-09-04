@@ -3,24 +3,34 @@ const sendBtn = document.querySelector(".chat-input span");
 const chatBox = document.querySelector(".chatbox");
 const chatBoxToggler=document.querySelector(".chatbot-toggler");
 const chatbotClosebtn=document.querySelector(".close-btn")
+
+import API_KEY from './API_KEY.js';
+
 let userMessage;
 const inputInitHeight=chatInput.scrollHeight;
+
 const createChatLi = (message, className) => {
+
   const chatLi = document.createElement("li");
+
   chatLi.classList.add("chat", className);
+
   let chatContent =
     className === "outgoing"
       ? `<p></p>`
       : ` <span class="material-symbols-outlined"> smart_toy </span><p></p>`;
   chatLi.innerHTML = chatContent;
   chatLi.querySelector("p").textContent = message;
+
   return chatLi;
 };
-let API_KEY = "AIzaSyDd1AV-fOsciZF5VxlgDCV6B33MRSQKJ48";
+
+console.log(API_KEY);
 
 const generateResponse = (incomingChatLi) => {
   const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`;
   const messageElement = incomingChatLi.querySelector("p");
+  
   const requestOptions = {
     method: "POST",
     headers: { "Content-Type": "application/json" },
